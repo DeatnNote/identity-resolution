@@ -1,0 +1,219 @@
+{
+  "share_button": {
+    "activated": {
+      "control_mean": 0.2623231533972835,
+      "true_effect": 0.0
+    },
+    "d1_retained": {
+      "control_mean": 0.4117803527788399,
+      "true_effect": 0.0
+    },
+    "w4_retained": {
+      "control_mean": 0.3606590081627903,
+      "true_effect": 0.0
+    },
+    "generations_7d": {
+      "control_mean": 8.073830859004838,
+      "true_effect": 0.0
+    },
+    "converted_28d": {
+      "control_mean": 0.018586557164469417,
+      "true_effect": 0.0
+    },
+    "revenue_28d": {
+      "control_mean": 0.23645492178018654,
+      "true_effect": 0.0
+    },
+    "daily_active_effect_by_day": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "onboarding_v2": {
+    "activated": {
+      "control_mean": 0.25291621599134706,
+      "true_effect": 0.06674432149097263
+    },
+    "d1_retained": {
+      "control_mean": 0.39826940677261,
+      "true_effect": 0.06501372826358266
+    },
+    "w4_retained": {
+      "control_mean": 0.358732007654547,
+      "true_effect": 0.005541226391546718
+    },
+    "generations_7d": {
+      "control_mean": 7.957600465928945,
+      "true_effect": 1.1342374573591814
+    },
+    "converted_28d": {
+      "control_mean": 0.01793826441467676,
+      "true_effect": 0.0018304351443547717
+    },
+    "revenue_28d": {
+      "control_mean": 0.23732423662534322,
+      "true_effect": 0.02391213911307097
+    },
+    "daily_active_effect_by_day": [
+      0.01519,
+      0.06501,
+      0.04946,
+      0.03761,
+      0.0303,
+      0.02193,
+      0.01776,
+      0.01541,
+      0.01233,
+      0.01047,
+      0.0082,
+      0.00714,
+      0.00661,
+      0.00484,
+      0.00436,
+      0.00458,
+      0.00364,
+      0.00346,
+      0.00354,
+      0.0028,
+      0.003,
+      0.00245,
+      0.00226,
+      0.00255,
+      0.0027,
+      0.00231,
+      0.00218,
+      0.00235
+    ]
+  },
+  "template_gallery": {
+    "activated": {
+      "control_mean": 0.2587511904960818,
+      "true_effect": 0.033083259536500195
+    },
+    "d1_retained": {
+      "control_mean": 0.4081605373523367,
+      "true_effect": 0.013818108907417
+    },
+    "w4_retained": {
+      "control_mean": 0.3527544319871677,
+      "true_effect": 0.017377065615131415
+    },
+    "generations_7d": {
+      "control_mean": 8.032548580594495,
+      "true_effect": 0.7365035338936323
+    },
+    "converted_28d": {
+      "control_mean": 0.01689251282394025,
+      "true_effect": 0.003107821350398503
+    },
+    "revenue_28d": {
+      "control_mean": 0.2240137679827566,
+      "true_effect": 0.041454326722251
+    },
+    "daily_active_effect_by_day": [
+      0.00287,
+      0.01382,
+      0.01449,
+      0.01422,
+      0.01367,
+      0.0138,
+      0.0132,
+      0.01243,
+      0.01183,
+      0.01241,
+      0.01178,
+      0.01103,
+      0.01048,
+      0.00902,
+      0.01003,
+      0.00919,
+      0.00847,
+      0.00922,
+      0.00859,
+      0.00822,
+      0.00794,
+      0.00787,
+      0.00735,
+      0.00688,
+      0.00673,
+      0.00688,
+      0.00683,
+      0.00653
+    ]
+  },
+  "interaction": {
+    "activated": {
+      "tg_effect_without_onb": 0.03426395939086294,
+      "tg_effect_with_onb": 0.025213732300293883,
+      "interaction": -0.00905022709056906
+    },
+    "w4_retained": {
+      "tg_effect_without_onb": 0.024545818861875502,
+      "tg_effect_with_onb": -0.004508415709324072,
+      "interaction": -0.029054234571199572
+    },
+    "generations_7d": {
+      "tg_effect_without_onb": 0.8178266096713865,
+      "tg_effect_with_onb": 0.471947635586428,
+      "interaction": -0.34587897408495855
+    }
+  },
+  "paywall_price": {
+    "converted_28d": {
+      "control_mean": 0.2634432396547909,
+      "true_effect": -0.056096481522460724
+    },
+    "revenue_28d": {
+      "control_mean": 3.1613188758574906,
+      "true_effect": -0.051117503872538175
+    },
+    "w4_retained": {
+      "control_mean": 0.6731577782695286,
+      "true_effect": -0.008408940030980305
+    },
+    "revenue_by_country": {
+      "US": 0.1388888888888889,
+      "EU": 0.5697050938337802,
+      "ROW": -0.5921483097055616
+    },
+    "n_population": 9038
+  },
+  "ltv_150d_per_signup_by_channel": {
+    "organic": 2.387,
+    "paid_social": 1.369,
+    "referral": 4.595,
+    "tiktok_ugc": 1.1
+  },
+  "meta": {
+    "users": 120000,
+    "cutoff_day": 84,
+    "seed": 0,
+    "seconds": 34.4
+  }
+}
