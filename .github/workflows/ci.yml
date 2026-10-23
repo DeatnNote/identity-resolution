@@ -1,5 +1,8 @@
 name: ci
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -10,5 +13,31 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt ruff
-      - run: ruff check gel tests --select E,F --ignore E501
+      - run: ruff check irl mcp_server pipelines spark dags tests --select E,F --ignore E501,E741
       - run: pytest -q
+
+  spark-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - run: pip install -r requirements.txt pyspark
+      - run: python spark/blocking_job.py --people 3000 --out /tmp/skew.json
+
+  terraform:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: infra/terraform
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - run: terraform fmt -check
+      - run: terraform init -backend=false
+      - run: terraform validate

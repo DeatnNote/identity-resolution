@@ -1,0 +1,423 @@
+{
+  "seed": 2,
+  "n_records": 49610,
+  "n_people": 20000,
+  "true_pairs": 51277,
+  "candidate_pairs": 111693,
+  "review_pairs": 3000,
+  "data_quality": [
+    {
+      "expectation": "schema_has_expected_columns",
+      "passed": true,
+      "critical": true,
+      "detail": "missing=[]"
+    },
+    {
+      "expectation": "record_id_unique",
+      "passed": true,
+      "critical": true,
+      "detail": "duplicates=0"
+    },
+    {
+      "expectation": "record_id_not_null",
+      "passed": true,
+      "critical": true,
+      "detail": ""
+    },
+    {
+      "expectation": "zip_is_5_digits",
+      "passed": true,
+      "critical": true,
+      "detail": "share_valid=1.000"
+    },
+    {
+      "expectation": "source_in_known_set",
+      "passed": true,
+      "critical": false,
+      "detail": "unknown=[]"
+    },
+    {
+      "expectation": "email_well_formed",
+      "passed": true,
+      "critical": false,
+      "detail": "share_valid=1.000"
+    },
+    {
+      "expectation": "phone_has_10_digits",
+      "passed": true,
+      "critical": false,
+      "detail": "share_valid=1.000"
+    }
+  ],
+  "blocking": [
+    {
+      "blocking": "zip+last3",
+      "candidate_pairs": 664612,
+      "true_pairs_found": 47192,
+      "pair_completeness": 0.9203346529633168,
+      "reduction_ratio": 0.9994599070922885,
+      "largest_block": 498,
+      "seconds": 0.18
+    },
+    {
+      "blocking": "soundex+initial+zip",
+      "candidate_pairs": 91312,
+      "true_pairs_found": 46950,
+      "pair_completeness": 0.9156151880960275,
+      "reduction_ratio": 0.9999257958574492,
+      "largest_block": 75,
+      "seconds": 0.06
+    },
+    {
+      "blocking": "email",
+      "candidate_pairs": 28336,
+      "true_pairs_found": 16210,
+      "pair_completeness": 0.31612613842463483,
+      "reduction_ratio": 0.999976972921595,
+      "largest_block": 39,
+      "seconds": 0.03
+    },
+    {
+      "blocking": "phone",
+      "candidate_pairs": 24316,
+      "true_pairs_found": 19745,
+      "pair_completeness": 0.38506542894475104,
+      "reduction_ratio": 0.9999802397501942,
+      "largest_block": 9,
+      "seconds": 0.03
+    },
+    {
+      "blocking": "card4+zip",
+      "candidate_pairs": 21476,
+      "true_pairs_found": 20750,
+      "pair_completeness": 0.40466485948865966,
+      "reduction_ratio": 0.9999825476589559,
+      "largest_block": 7,
+      "seconds": 0.03
+    },
+    {
+      "blocking": "zip+last3 \u222a soundex+initial+zip \u222a email \u222a phone \u222a card4+zip",
+      "candidate_pairs": 685140,
+      "true_pairs_found": 50745,
+      "pair_completeness": 0.9896249780603389,
+      "reduction_ratio": 0.9994432251376902,
+      "largest_block": 498,
+      "seconds": 0.26
+    },
+    {
+      "blocking": "soundex+initial+zip \u222a email \u222a phone \u222a card4+zip",
+      "candidate_pairs": 111693,
+      "true_pairs_found": 50280,
+      "pair_completeness": 0.9805565848236051,
+      "reduction_ratio": 0.9999092333615086,
+      "largest_block": 75,
+      "seconds": 0.12
+    }
+  ],
+  "champion_fellegi_sunter": {
+    "threshold": 13.72198504177447,
+    "pair_ap": 0.9625608059917694,
+    "pair_precision": 0.9469450624679103,
+    "pair_recall": 0.877766320298247,
+    "pair_f1": 0.9110443337586959,
+    "false_positives": 1240,
+    "fp_same_household_share": 0.5782258064516129,
+    "brier_uncalibrated_posterior": 0.11729528078223042,
+    "connected_components": {
+      "bcubed_precision": 0.945329506265139,
+      "bcubed_recall": 0.9546826292593786,
+      "bcubed_f1": 0.9499830466172593,
+      "n_clusters": 10349,
+      "n_true": 9978,
+      "largest_cluster": 39,
+      "overmerged_clusters": 444
+    },
+    "constrained_components": {
+      "bcubed_precision": 0.9905728374871394,
+      "bcubed_recall": 0.9213345157476083,
+      "bcubed_f1": 0.9546999691118307,
+      "n_clusters": 11455,
+      "n_true": 9978,
+      "largest_cluster": 10,
+      "overmerged_clusters": 105
+    }
+  },
+  "challenger_lightgbm": {
+    "threshold": 0.36222224461333336,
+    "pair_ap": 0.9942322402097171,
+    "pair_precision": 0.9451903693279069,
+    "pair_recall": 0.9855635757912271,
+    "pair_f1": 0.9649548587515775,
+    "false_positives": 1441,
+    "fp_same_household_share": 0.07078417765440666,
+    "brier": 0.0340297392078817,
+    "connected_components": {
+      "bcubed_precision": 0.9285167921880175,
+      "bcubed_recall": 0.991583360206385,
+      "bcubed_f1": 0.9590143510563394,
+      "n_clusters": 9444,
+      "n_true": 9978,
+      "largest_cluster": 52,
+      "overmerged_clusters": 410
+    },
+    "constrained_components": {
+      "bcubed_precision": 0.9892932963253022,
+      "bcubed_recall": 0.9733069977426636,
+      "bcubed_f1": 0.981235039089399,
+      "n_clusters": 10384,
+      "n_true": 9978,
+      "largest_cluster": 8,
+      "overmerged_clusters": 126
+    }
+  },
+  "fs_parameters": [
+    {
+      "field": "first",
+      "level": 1,
+      "m": 0.35645057607429614,
+      "u": 0.9879449347849493,
+      "weight": -1.01943136846566
+    },
+    {
+      "field": "first",
+      "level": 2,
+      "m": 0.027781621082916305,
+      "u": 0.0035900179321395713,
+      "weight": 2.0462174924276297
+    },
+    {
+      "field": "first",
+      "level": 3,
+      "m": 0.05347121325296258,
+      "u": 0.0011000054945274453,
+      "weight": 3.883828264235447
+    },
+    {
+      "field": "first",
+      "level": 4,
+      "m": 0.5622965572717399,
+      "u": 0.007365036788358759,
+      "weight": 4.33528534776963
+    },
+    {
+      "field": "initial",
+      "level": 1,
+      "m": 0.10887942112801666,
+      "u": 0.9231188421670383,
+      "weight": -2.137516940901323
+    },
+    {
+      "field": "initial",
+      "level": 2,
+      "m": 0.8911205399294475,
+      "u": 0.07688115283288674,
+      "weight": 2.450218944662107
+    },
+    {
+      "field": "last",
+      "level": 1,
+      "m": 0.014933935235693176,
+      "u": 0.9618548044647484,
+      "weight": -4.1652273524625025
+    },
+    {
+      "field": "last",
+      "level": 2,
+      "m": 0.027186231389582684,
+      "u": 0.007050035214925899,
+      "weight": 1.3496780343909764
+    },
+    {
+      "field": "last",
+      "level": 3,
+      "m": 0.08190016029604114,
+      "u": 0.0029000144855723556,
+      "weight": 3.3407852160688245
+    },
+    {
+      "field": "last",
+      "level": 4,
+      "m": 0.8759796341361502,
+      "u": 0.02819514083472847,
+      "weight": 3.436193189691491
+    },
+    {
+      "field": "email",
+      "level": 1,
+      "m": 0.09212324426531576,
+      "u": 0.9981684833055111,
+      "weight": -2.3827947908607165
+    },
+    {
+      "field": "email",
+      "level": 2,
+      "m": 0.0915648187443518,
+      "u": 0.0016825992185205154,
+      "weight": 3.996707371374234
+    },
+    {
+      "field": "email",
+      "level": 3,
+      "m": 0.8163118744357412,
+      "u": 0.00014890258570978012,
+      "weight": 8.609259455039457
+    },
+    {
+      "field": "phone",
+      "level": 1,
+      "m": 0.29467480937524254,
+      "u": 0.9999143619048774,
+      "weight": -1.2217972300057427
+    },
+    {
+      "field": "phone",
+      "level": 2,
+      "m": 0.7053251431831309,
+      "u": 8.56258628564071e-05,
+      "weight": 9.016426797793923
+    },
+    {
+      "field": "zip",
+      "level": 1,
+      "m": 0.20841167038267558,
+      "u": 0.984784766847579,
+      "weight": -1.5529077982523374
+    },
+    {
+      "field": "zip",
+      "level": 2,
+      "m": 0.7915882906747885,
+      "u": 0.015215228152346145,
+      "weight": 3.951744643185425
+    },
+    {
+      "field": "addr",
+      "level": 1,
+      "m": 0.1886566451421953,
+      "u": 0.9958310237992393,
+      "weight": -1.663648917868141
+    },
+    {
+      "field": "addr",
+      "level": 2,
+      "m": 0.0011763297637082369,
+      "u": 0.004018876982025498,
+      "weight": -1.2286032844131392
+    },
+    {
+      "field": "addr",
+      "level": 3,
+      "m": 0.8101669670661732,
+      "u": 0.00015008254289721777,
+      "weight": 8.593810208860864
+    },
+    {
+      "field": "card",
+      "level": 1,
+      "m": 0.24263343929438555,
+      "u": 0.9998758703735199,
+      "weight": -1.4160793174822544
+    },
+    {
+      "field": "card",
+      "level": 2,
+      "m": 0.757366396548328,
+      "u": 0.0001241172147585645,
+      "weight": 8.716376027196317
+    },
+    {
+      "field": "birth",
+      "level": 1,
+      "m": 0.20589325261962022,
+      "u": 0.984184136344822,
+      "weight": -1.5644551666620217
+    },
+    {
+      "field": "birth",
+      "level": 2,
+      "m": 0.7941064697520742,
+      "u": 0.015815781708122454,
+      "weight": 3.9162092613361073
+    }
+  ],
+  "fs_prior_lambda": 4.605415681002379e-05,
+  "drift_psi": {
+    "source": {
+      "psi": 3.466,
+      "alert": true
+    },
+    "email_domain": {
+      "psi": 0.261,
+      "alert": true
+    },
+    "has_email": {
+      "psi": 0.26,
+      "alert": true
+    },
+    "has_phone": {
+      "psi": 0.097,
+      "alert": false
+    },
+    "name_tokens": {
+      "psi": 3.434,
+      "alert": true
+    }
+  },
+  "drift_expectations": [
+    {
+      "expectation": "schema_has_expected_columns",
+      "passed": true,
+      "critical": true,
+      "detail": "missing=[]"
+    },
+    {
+      "expectation": "record_id_unique",
+      "passed": true,
+      "critical": true,
+      "detail": "duplicates=0"
+    },
+    {
+      "expectation": "record_id_not_null",
+      "passed": true,
+      "critical": true,
+      "detail": ""
+    },
+    {
+      "expectation": "zip_is_5_digits",
+      "passed": true,
+      "critical": true,
+      "detail": "share_valid=1.000"
+    },
+    {
+      "expectation": "source_in_known_set",
+      "passed": false,
+      "critical": false,
+      "detail": "unknown=['kiosk']"
+    },
+    {
+      "expectation": "email_well_formed",
+      "passed": true,
+      "critical": false,
+      "detail": "share_valid=1.000"
+    },
+    {
+      "expectation": "phone_has_10_digits",
+      "passed": true,
+      "critical": false,
+      "detail": "share_valid=1.000"
+    },
+    {
+      "expectation": "null_rates_within_tolerance",
+      "passed": false,
+      "critical": false,
+      "detail": "increases={'email': 0.251, 'phone': 0.154, 'card_last4': 0.216}"
+    }
+  ],
+  "drift_batch_blocked": false,
+  "seconds": 19.056721687316895,
+  "promotion": {
+    "promote_challenger": false,
+    "bcubed_f1_gain": 0.02653506997756827,
+    "overmerge_change": 21
+  }
+}

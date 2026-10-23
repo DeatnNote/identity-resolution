@@ -1,0 +1,38 @@
+{
+  "records": 49521,
+  "keys": 10417,
+  "largest_block": 473,
+  "blocks_over_cap": 17,
+  "max_block_cap": 100,
+  "salts": 8,
+  "true_pairs": 50876,
+  "strategies": {
+    "naive": {
+      "candidate_pairs": 644453,
+      "true_pairs_found": 46793,
+      "pair_completeness": 0.9197,
+      "seconds": 1.33,
+      "max_task_rows": 149284,
+      "median_task_rows": 27444.0,
+      "max_over_median": 5.4
+    },
+    "capped": {
+      "candidate_pairs": 290174,
+      "true_pairs_found": 43673,
+      "pair_completeness": 0.8584,
+      "seconds": 1.44,
+      "max_task_rows": 25202,
+      "median_task_rows": 18610.5,
+      "max_over_median": 1.4
+    },
+    "salted": {
+      "candidate_pairs": 644453,
+      "true_pairs_found": 46793,
+      "pair_completeness": 0.9197,
+      "seconds": 2.08,
+      "max_task_rows": 63442,
+      "median_task_rows": 37431.5,
+      "max_over_median": 1.7
+    }
+  }
+}

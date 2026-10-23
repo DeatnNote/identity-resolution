@@ -1,3 +1,7 @@
 __pycache__/
 data/
+mlruns/
+mlflow.db
+.terraform/
+*.tfstate*
 .pytest_cache/

@@ -1,8 +1,12 @@
 numpy>=1.26
 pandas>=2.1
 pyarrow>=15
-scipy>=1.11
-statsmodels>=0.14
-duckdb>=1.0
-matplotlib>=3.8
+scikit-learn>=1.4
+lightgbm>=4.3
+jellyfish>=1.0
+mlflow>=2.14
+mcp>=1.2
 pytest>=8
+# optional
+# pyspark>=3.5        spark/blocking_job.py (needs Java 17+)
+# apache-airflow>=2.9 dags/ (tested with Airflow 3.3.2 via `airflow dags test`)
